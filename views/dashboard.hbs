@@ -2,6 +2,33 @@
 
 <section class="ui left aligned middle aligned segment">
   
+  <h2>Modlist App Dashboard</h2>
+  
+  {{#unless modlists}}
+    <h3 class="ui message">
+      Start adding your modlists!
+    </h3>
+  {{/unless}}
+
+  {{#each modlists}}
+    <section class="ui left aligned middle aligned segment">
+
+      <h3 class="ui header">
+        {{title}}
+      </h3>
+      <a href="/modlist/{{id}}"> View </a>
+    </section>
+  {{/each}}
+
+</section>
+
+
+
+
+{{!-- {{> menu id="dashboard"}}
+
+<section class="ui left aligned middle aligned segment">
+  
     <h2>Modlist App Dashboard</h2>
 
 
@@ -58,4 +85,4 @@
   
   {{/each}}
 
-</section>
+</section> --}}
