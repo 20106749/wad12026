@@ -4,16 +4,37 @@
   
     <h2>Modlist App Dashboard</h2>
 
-      <section class="ui left aligned middle aligned segment">
-        <h3 class="ui header">
-          {{modlists.0.title}}
-        </h3>
-      </section>
+  {{#each modlists}}
   
-      <section class="ui left aligned middle aligned segment">
-        <h3 class="ui header">
-          {{modlists.1.title}}
-        </h3>
-      </section>
+    <section class="ui left aligned middle aligned scrolling segment">
+
+      <h3 class="ui header">
+        {{title}}
+      </h3>      
+  
+      <table class="ui unstackable striped table">
+        <thead>
+          <tr>
+            <th>Mod</th>
+            <th>Creator</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each mods}}
+            <tr>
+              <td>
+                {{title}}
+              </td>
+              <td>
+                {{creator}}
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      
+    </section>
+  
+  {{/each}}
 
 </section>

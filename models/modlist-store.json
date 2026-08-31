@@ -46,6 +46,22 @@
       "id" : "03",
       "title": "Magic & Exploration",
       "mods": []
+    },
+    {
+      "id" : "04",
+      "title": "Food & Utility",
+      "mods": [
+        {
+          "id" : "10",
+          "title": "AppleSkin",
+          "creator": "squeek502"
+        },
+        {
+          "id" : "11",
+          "title": "AppleCore",
+          "creator": "squeek502"
+        }
+      ]
     }
   ]
 }
