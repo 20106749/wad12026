@@ -1,6 +1,7 @@
 'use strict';
 
 import logger from "../utils/logger.js";
+import devStore from "../models/dev-store.js";
 
 // const about = {
 //   createView(request, response) {
@@ -14,9 +15,11 @@ const about = {
     logger.info("About page loading!");
     
     const viewData = {
-      title: "About Modlist App"
+      title: "About Modlist App",
+      devs: devStore.getDevInfo()
     };
     
+    logger.info(viewData.devs)
     response.render('about', viewData);
   },
 };

@@ -1,0 +1,11 @@
+{
+  "developer" : {
+    "name":"Louis",
+    "fullname":"Louis Langan",
+    "image":"/me.jpg",
+    "joined":2099,
+    "job":"Web Developer",
+    "city":"Waterford",
+	"mates": 35
+  }
+}
