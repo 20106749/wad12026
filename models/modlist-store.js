@@ -12,6 +12,10 @@ const modlistStore = {
   getAllModlists() {
     return this.store.findAll(this.collection);
   },
+  getModlist(id) {
+    return this.store.findOneBy(this.collection, (modlist => modlist.id === id));
+  },
+
 
 };
 

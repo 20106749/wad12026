@@ -1,0 +1,29 @@
+{{#if singleModlist.mods}}
+
+  <table class="ui unstackable striped table">
+    <thead>
+      <tr>
+        <th>Mod</th>
+        <th>Creator</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each singleModlist.mods}}
+        <tr>
+          <td>
+            {{title}}
+          </td>
+          <td>
+            {{creator}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  {{else}}
+    <h3 class="ui message">
+      Empty modlist!
+    </h3>
+
+{{/if}}
