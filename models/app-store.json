@@ -1,0 +1,21 @@
+{
+  "info": {
+    "appTitle": "Modlist Maker",
+    "version": 0.5,
+    "creators": [
+      {
+        "name": "Louis Langan",
+        "role": "Web Developer"
+      },
+      {
+        "name": "Rosanne Birney",
+        "role": "Web Developer"
+      },
+      {
+        "name": "A.N. Other",
+        "role": "Web Developer"
+      }
+    ],
+    "location": "Waterford"
+  } 
+}
