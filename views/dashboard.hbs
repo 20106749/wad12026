@@ -4,6 +4,17 @@
   
     <h2>Modlist App Dashboard</h2>
 
+
+
+{{#unless modlists}}
+    <h3 class="ui message">
+      Start adding your modlists!
+    </h3>
+{{/unless}}
+
+
+
+
   {{#each modlists}}
   
     <section class="ui left aligned middle aligned scrolling segment">
@@ -11,7 +22,11 @@
       <h3 class="ui header">
         {{title}}
       </h3>      
-  
+
+
+
+{{#if mods}}
+
       <table class="ui unstackable striped table">
         <thead>
           <tr>
@@ -32,7 +47,13 @@
           {{/each}}
         </tbody>
       </table>
-      
+{{else}}
+    <h3 class="ui message">
+        Empty modlist!
+    </h3>
+{{/if}}
+
+
     </section>
   
   {{/each}}
