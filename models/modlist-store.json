@@ -1,0 +1,51 @@
+{
+  "modlistCollection": [
+    {
+      "id" : "01",
+      "title": "Performance Mods",
+      "mods": [
+        {
+          "id" : "04",
+          "title": "Sodium",
+          "creator": "jellysquid3_"
+        },
+        {
+          "id" : "05",
+          "title": "Lithium",
+          "creator": "jellysquid3_"
+        },
+        {
+          "id" : "06",
+          "title": "Phosphor",
+          "creator": "jellysquid3_"
+        }
+      ]
+    },
+    {
+      "id" : "02",
+      "title": "Tech & Automation",
+      "mods": [
+        {
+          "id" : "07",
+          "title": "Create",
+          "creator": "simibubi"
+        },
+        {
+          "id" : "08",
+          "title": "Thermal Expansion",
+          "creator": "TeamCoFH"
+        },
+        {
+          "id" : "09",
+          "title": "Mekanism",
+          "creator": "bradyaidanc"
+        }
+      ]
+    },
+    {
+      "id" : "03",
+      "title": "Magic & Exploration",
+      "mods": []
+    }
+  ]
+}
