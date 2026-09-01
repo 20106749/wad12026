@@ -1,0 +1,15 @@
+<form class="ui stacked segment form" action="/modlist/{{id}}/addmod" method="POST">
+  <div class="two fields">
+    <div class="field">
+      <label>Mod</label> <!-- called title in the json -->
+      <input type="text" name="title" autofocus required title = "Please include a valid Mod"
+	  placeholder="Mod">
+    </div>
+    <div class="field">
+      <label>Creator</label>
+      <input type="text" name="creator" required title = "Please include a valid Creator"
+	  placeholder="Creator"  >
+    </div>
+  </div>
+  <button class="ui blue submit button">Add Mod</button>
+</form>
