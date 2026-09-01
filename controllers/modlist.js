@@ -2,18 +2,32 @@
 
 import logger from '../utils/logger.js';
 import modlistStore from '../models/modlist-store.js';
+import { v4 as uuidv4 } from 'uuid';
 
 const modlist = {
-  createView(request, response) {
-    const modlistId = request.params.id;
-    logger.debug(`Modlist id = ${modlistId}`);
-    
-    const viewData = {
-      title: 'Modlist',
-      singleModlist: modlistStore.getModlist(modlistId)
-    };
-    response.render('modlist', viewData);
-  },
+    createView(request, response) {
+        const modlistId = request.params.id;
+        logger.debug(`Modlist id = ${modlistId}`);
+        
+        const viewData = {
+            title: 'Modlist',
+            singleModlist: modlistStore.getModlist(modlistId)
+        };
+        response.render('modlist', viewData);
+    },
+
+    addMod(request, response) {
+        const modlistId = request.params.id;
+        const modlist = modistStore.getModlist(modlistId);
+        const newMod = {
+            id: uuidv4(),
+            title: request.body.title,
+            creator: request.body.creator,
+        };
+        modlistStore.addMod(modlistId, newMod);
+        response.redirect('/modlist/' + modlistId);
+    },
+
 };
 
 export default modlist;

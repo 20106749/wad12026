@@ -13,6 +13,7 @@ router.get('/', start.createView);
 router.get('/dashboard', dashboard.createView);
 router.get('/about', about.createView);
 router.get('/modlist/:id', modlist.createView);
+router.post('/modlist/:id/addmod', modlist.addMod);
 
 router.get('/error', (request, response) => response.status(404).end('Page not found.'));
 

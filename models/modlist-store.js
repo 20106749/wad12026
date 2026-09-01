@@ -15,7 +15,9 @@ const modlistStore = {
   getModlist(id) {
     return this.store.findOneBy(this.collection, (modlist => modlist.id === id));
   },
-
+  addMod(id, mod) {
+    this.store.addItem(this.collection, id, this.array, mod);
+  },
 
 };
 
