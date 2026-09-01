@@ -18,6 +18,9 @@ const modlistStore = {
   addMod(id, mod) {
     this.store.addItem(this.collection, id, this.array, mod);
   },
+  addModlist(modlist) {
+    this.store.addCollection(this.collection, modlist);
+  },
 
 };
 

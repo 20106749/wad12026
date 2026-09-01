@@ -1,0 +1,31 @@
+<section class="ui left aligned middle aligned segment">
+  
+  <h2>Modlist App Dashboard</h2>
+  
+  {{#unless modlists}}
+    <h3 class="ui message">
+      Start adding your modlists!
+    </h3>
+  {{/unless}}
+
+  {{#each modlists}}
+    <section class="ui left aligned middle aligned segment">
+
+      <h3 class="ui header">
+        {{title}}
+      </h3>
+      {{#if mods}}
+        <p>
+            <b>Modpack size:</b> <i>{{mods.length}}</i>
+        </p>
+        <a href="/modlist/{{id}}"><i class="folder open icon outline black"></i> View </a>
+      {{else}}
+        <h3 class="ui message">
+            Empty modlist!
+        </h3>
+      <a href="/modlist/{{id}}"><i class="plus icon black"></i> Add Mods </a>
+      {{/if}}
+    </section>
+  {{/each}}
+
+</section>
