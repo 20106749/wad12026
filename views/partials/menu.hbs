@@ -1,5 +1,6 @@
 <nav class="ui stackable menu">
   <header class="ui header item"> <a href="/"> Modlist App </a></header>
+  {{!-- <header id="start" class="ui header item"> <a href="/"> Modlist App </a></header> --}}
   <div class="right menu">
     <a id="dashboard" class="item" href="/dashboard"> Dashboard  </a>
     <a id="about" class="item" href="/about"> About  </a>
@@ -7,5 +8,46 @@
 </nav>
 
 <script>
- document.querySelector("#{{id}}").classList.add("active");
+  {{#if id}}
+    document.querySelector("#{{id}}").classList.add("active");
+  {{/if}}
 </script>
+
+
+
+
+
+
+
+{{!-- 
+<script>
+  the query code
+</script>
+
+vs
+
+<script>
+  {{#if id}}
+    the query code
+  {{/if}}
+</script> 
+--}}
+
+
+{{!-- 
+tweaked the active page selector to check if there's an id as it threw a 
+
+Uncaught DOMException: Document.querySelector: '#' is not a valid selector
+    <anonymous> http://localhost:3000/modlist/03:23
+
+on the modlist pages where you view the mods and
+
+Uncaught DOMException: Document.querySelector: '#' is not a valid selector
+    <anonymous> http://localhost:3000/:23
+
+on the start / homepage where theres only a "/" in the url [the root page]
+
+
+but i also added the id to those pages, then removed it from start as it seems a bit too grey
+
+ --}}
