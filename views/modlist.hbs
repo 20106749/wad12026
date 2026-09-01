@@ -1,9 +1,13 @@
 {{> menu}}
+  
+{{#with singleModlist}}
 
 <section class="ui center aligned middle aligned scrolling segment">
   <h2 class="ui header">
-    {{singleModlist.title}}
-    {{mods.length}}
+    {{title}}
+    {{!-- {{mods.length}} --}} {{!-- moved to listmods --}}
   </h2>
   {{> listmods}}
-</section>
+  </section>
+
+{{/with}}

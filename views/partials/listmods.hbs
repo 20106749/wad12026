@@ -1,14 +1,14 @@
-{{#if singleModlist.mods}}
+{{#if mods}}
 
   <table class="ui unstackable striped table">
     <thead>
       <tr>
-        <th>Mod</th>
+        <th>Mod (Total: {{mods.length}})</th>
         <th>Creator</th>
       </tr>
     </thead>
     <tbody>
-      {{#each singleModlist.mods}}
+      {{#each mods}}
         <tr>
           <td>
             {{title}}
