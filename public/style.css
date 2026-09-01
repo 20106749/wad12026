@@ -7,8 +7,28 @@ html {
   box-sizing: inherit;
 }
 
-body {
+/* body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
   background-color: lightgrey;
+} */
+
+body {
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    margin: 2em;
+
+    /* 1. Link Minecraft block texture */
+    /* background-image: url('snow.png'); */
+    /* background-image: url('slime.png'); */
+    background-image: url('options_background.png');
+    /* 2. Tell the browser to tile the image vertically and horizontally */
+    background-repeat: repeat;
+    /* 3. Scale the block to a visible pixelated size (e.g., 64px or 128px) */
+    background-size: 64px;
+    /* 4. CRITICAL: Prevents the browser from blurring the pixel art when scaled */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    /* 5. Fallback solid color while the texture loads */
+    /* background-color: #4a3b2c;  */
+    background-color: lightgrey;
 }
