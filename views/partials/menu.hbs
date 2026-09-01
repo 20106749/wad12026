@@ -1,3 +1,4 @@
+<!-- NAV MENU -->
 <nav class="ui stackable menu">
   <header class="ui header item"> <a href="/"> Modlist App </a></header>
   {{!-- <header id="start" class="ui header item"> <a href="/"> Modlist App </a></header> --}}
@@ -6,18 +7,12 @@
     <a id="about" class="item" href="/about"> About  </a>
   </div>
 </nav>
-
+<!-- script greys active page -->
 <script>
   {{#if id}}
     document.querySelector("#{{id}}").classList.add("active");
   {{/if}}
 </script>
-
-
-
-
-
-
 
 {{!-- 
 <script>
@@ -32,8 +27,6 @@ vs
   {{/if}}
 </script> 
 --}}
-
-
 {{!-- 
 tweaked the active page selector to check if there's an id as it threw a 
 
