@@ -16,73 +16,18 @@
       <h3 class="ui header">
         {{title}}
       </h3>
-      <a href="/modlist/{{id}}"> View </a>
+      {{#if mods}}
+        <p>
+            <b>Modpack size:</b> <i>{{mods.length}}</i>
+        </p>
+        <a href="/modlist/{{id}}"> View </a>
+      {{else}}
+        <h3 class="ui message">
+            Empty modlist!
+        </h3>
+      <a href="/modlist/{{id}}"> Add Mods </a>
+      {{/if}}
     </section>
   {{/each}}
 
 </section>
-
-
-
-
-{{!-- {{> menu id="dashboard"}}
-
-<section class="ui left aligned middle aligned segment">
-  
-    <h2>Modlist App Dashboard</h2>
-
-
-
-{{#unless modlists}}
-    <h3 class="ui message">
-      Start adding your modlists!
-    </h3>
-{{/unless}}
-
-
-
-
-  {{#each modlists}}
-  
-    <section class="ui left aligned middle aligned scrolling segment">
-
-      <h3 class="ui header">
-        {{title}}
-      </h3>      
-
-
-
-{{#if mods}}
-
-      <table class="ui unstackable striped table">
-        <thead>
-          <tr>
-            <th>Mod</th>
-            <th>Creator</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each mods}}
-            <tr>
-              <td>
-                {{title}}
-              </td>
-              <td>
-                {{creator}}
-              </td>
-            </tr>
-          {{/each}}
-        </tbody>
-      </table>
-{{else}}
-    <h3 class="ui message">
-        Empty modlist!
-    </h3>
-{{/if}}
-
-
-    </section>
-  
-  {{/each}}
-
-</section> --}}
