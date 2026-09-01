@@ -16,6 +16,11 @@
           <td>
             {{creator}}
           </td>
+          <td class="center aligned">
+            <a href="/modlist/{{../id}}/deletemod/{{id}}" title="Delete mod">
+              <i class="ui black trash icon"></i>
+            </a>
+          </td>
         </tr>
       {{/each}}
     </tbody>
@@ -23,7 +28,7 @@
 
   {{else}}
     <h3 class="ui message">
-      Empty modlist!
+      Empty modpack
     </h3>
 
 {{/if}}

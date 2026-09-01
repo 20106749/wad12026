@@ -28,6 +28,14 @@ const modlist = {
         response.redirect('/modlist/' + modlistId);
     },
 
+    deleteMod(request, response) {
+        const modlistId = request.params.id;
+        const modId = request.params.modId;
+        logger.debug(`Deleting Mod  $(modId} from Modlist ${modlistId}`);
+        modlistStore.removeMod(modlistId, modId);
+        response.redirect('/modlist/' + modlistId);
+    },
+
 };
 
 export default modlist;

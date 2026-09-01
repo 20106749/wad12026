@@ -21,6 +21,9 @@ const modlistStore = {
   addModlist(modlist) {
     this.store.addCollection(this.collection, modlist);
   },
+  removeMod(id, modId) {
+    this.store.removeItem(this.collection, id, this.array, modId);
+  },
 
 };
 
