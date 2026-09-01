@@ -18,7 +18,7 @@ const modlist = {
 
     addMod(request, response) {
         const modlistId = request.params.id;
-        const modlist = modistStore.getModlist(modlistId);
+        const modlist = modlistStore.getModlist(modlistId);
         const newMod = {
             id: uuidv4(),
             title: request.body.title,
